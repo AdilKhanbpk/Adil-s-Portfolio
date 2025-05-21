@@ -65,7 +65,7 @@ export function AboutSection() {
           <Card className="glass-card">
             <CardContent className="card-content">
               <AnimatedText
-                text="Hey there! I'm Haroon Aawan, also known as 'Hane', and I'm a Computer Science graduate with a passion for web development."
+                text="Hey there! I'm Muhammad Adil, also known as 'Hane', and I'm a Computer Science graduate with a passion for web development."
                 className="mb-4 text-foreground/90"
                 type="words"
                 animation="slide-up"
@@ -121,7 +121,7 @@ export function AboutSection() {
                       Name:
                     </span>
                     <span className="text-muted-foreground text-[10px] sm:text-sm">
-                      Haroon Aawan
+                      Muhammad Adil
                     </span>
                   </div>
                   <div className="flex flex-col gap-1 w-full">
@@ -130,9 +130,9 @@ export function AboutSection() {
                     </span>
                     <span
                       className="text-muted-foreground text-[10px] sm:text-sm w-full email-text"
-                      title="muhammadharoonawan@gmail.com"
+                      title="adilkhanbpk@gmail.com"
                     >
-                      muhammadharoonawan@gmail.com
+                      adilkhanbpk@gmail.com
                     </span>
                   </div>
                   <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2">

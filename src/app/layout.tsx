@@ -8,8 +8,8 @@ import { Layout } from "@/components/layout/layout";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Haroon Aawan - Web Developer Portfolio",
-  description: "Professional portfolio of Haroon Aawan, a web developer specializing in creating beautiful and responsive web experiences.",
+  title: "Muhammad Adil - Web Developer Portfolio",
+  description: "Professional portfolio of Muhammad Adil, a web developer specializing in MERN Stack And Responsive Interfaces.",
 };
 
 export default function RootLayout({

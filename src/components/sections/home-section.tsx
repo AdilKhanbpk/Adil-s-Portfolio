@@ -65,7 +65,7 @@ export function HomeSection() {
         </motion.h2> */}
 
         <TypingEffect
-          text="Hello, I'm Haroon Aawan"
+          text="Hello, I'm Muhammad Adil"
           className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold gradient-text mb-6"
           delay={300}
           speed={70}

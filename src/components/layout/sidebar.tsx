@@ -132,12 +132,12 @@ function SidebarContent({
         <div className="h-24 w-24 rounded-full bg-primary/20 mb-4 overflow-hidden shadow-lg">
           <img
             src="/images/profile.jpg"
-            alt="Haroon Aawan"
+            alt="Muhammad Adil"
             className="w-full h-full object-cover"
           />
         </div>
         <h1 className="text-xl font-bold gradient-text">
-          Haroon Aawan
+          Muhammad Adil
         </h1>
         <p className="text-muted-foreground mt-1">Web Developer</p>
         <div className="flex gap-3 mt-4">
@@ -194,7 +194,7 @@ function SidebarContent({
       {/* Footer */}
       <div className="border-t border-border/40 p-4">
         <p className="text-center text-xs text-muted-foreground">
-          © 2024 Haroon Aawan
+          © 2024 Muhammad Adil
         </p>
       </div>
     </div>

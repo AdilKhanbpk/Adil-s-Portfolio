@@ -27,7 +27,7 @@ export function Header() {
         <div className="w-8 h-8 lg:hidden"></div>
         {/* Logo or brand name for desktop */}
         <div className="hidden lg:block">
-          <h1 className={`font-bold gradient-text transition-all duration-300 ${isScrolled ? 'text-base' : 'text-xl'}`}>Haroon Aawan</h1>
+          <h1 className={`font-bold gradient-text transition-all duration-300 ${isScrolled ? 'text-base' : 'text-xl'}`}>Muhammad Adil</h1>
         </div>
 
         {/* Desktop navigation */}

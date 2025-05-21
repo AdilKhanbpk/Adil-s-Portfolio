@@ -98,7 +98,7 @@ export async function POST(request: NextRequest) {
         <p><strong>Message:</strong></p>
         <p>${sanitizedMessage.replace(/\n/g, '<br>')}</p>
         <p>Best regards,</p>
-        <p>Haroon Aawan</p>
+        <p>Muhammad Adil</p>
       `,
     };
 
