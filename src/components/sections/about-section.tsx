@@ -19,7 +19,7 @@ const skills: Skill[] = [
   { name: "MERN Stack", percentage: 80 },
   { name: "Node.js & Express", percentage: 75 },
   { name: "MongoDB", percentage: 75 },
-  { name: "PHP", percentage: 70 },
+  { name: "SQL", percentage: 85 },
 ];
 
 const SkillBar = ({ skill, index }: { skill: Skill; index: number }) => {
@@ -73,45 +73,11 @@ export function AboutSection() {
                 duration={0.03}
               />
 
-              <ParallaxSection speed={0.1} direction="vertical">
-                <p className="mb-4 text-foreground/90 text-sm leading-relaxed">
-                  As a{" "}
-                  <span className="highlight">
-                    passionate front-end developer
-                  </span>
-                  , I specialize in creating{" "}
-                  <span className="highlight">visually stunning</span> and{" "}
-                  <span className="highlight">highly interactive</span> web
-                  experiences. With{" "}
-                  <span className="highlight">
-                    1.5+ years of hands-on experience
-                  </span>
-                  , I've developed a keen eye for detail and the technical
-                  skills to transform complex requirements into elegant
-                  solutions.
-                </p>
-              </ParallaxSection>
+              <ParallaxSection speed={0.05} direction="vertical" className="mb-3">
+As a <span className="highlight">MERN stack developer</span> with <span className="highlight">1.5+ years of experience</span>, I build <span className="highlight">interactive</span> and <span className="highlight">scalable web applications</span> using <span className="highlight">TypeScript</span>, <span className="highlight">Tailwind CSS</span>, and the MERN stack, turning complex ideas into clean, reliable solutions.              </ParallaxSection>
 
-              <ParallaxSection speed={0.15} direction="vertical" reverse={true}>
-                <p className="text-foreground/90 text-sm leading-relaxed">
-                  As a <span className="highlight">MERN stack developer</span>,
-                  I specialize in building{" "}
-                  <span className="highlight">full-stack applications</span>{" "}
-                  using{" "}
-                  <span className="text-primary/80 font-medium">MongoDB</span>,{" "}
-                  <span className="text-primary/80 font-medium">Express</span>,{" "}
-                  <span className="text-primary/80 font-medium">ReactJS</span>,
-                  and{" "}
-                  <span className="text-primary/80 font-medium">Node.js</span>.
-                  My expertise extends to{" "}
-                  <span className="highlight">advanced frameworks</span> like{" "}
-                  <span className="text-primary/80 font-medium">NextJS</span>{" "}
-                  and{" "}
-                  <span className="text-primary/80 font-medium">Angular</span>,
-                  creating solutions that are{" "}
-                  <span className="highlight">performant</span> and{" "}
-                  <span className="highlight">scalable</span>.
-                </p>
+              <ParallaxSection speed={0.05} direction="vertical" reverse={true} className="mt-2 mb-4">
+As a <span className="highlight">MERN stack developer</span>, I build <span className="highlight">full-stack web applications</span> using <span className="text-primary/80 font-medium">MongoDB</span>, <span className="text-primary/80 font-medium">Express.js</span>, <span className="text-primary/80 font-medium">React.js</span>, and <span className="text-primary/80 font-medium">Node.js</span>. With expertise in <span className="highlight">TypeScript</span> and <span className="highlight">Tailwind CSS</span>, I create clean UIs and focus on <span className="highlight">efficient third-party API integration</span> for scalable, real-world solutions.
               </ParallaxSection>
 
               <ScrollAnimation direction="up" delay={0.5} className="mt-8">

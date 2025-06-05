@@ -29,15 +29,15 @@ import { ParallaxSection } from "@/components/animations/parallax-section";
 const contactInfo: ContactInfo[] = [
   {
     title: "Email",
-    value: "muhammadharoonawan@gmail.com",
+    value: "adlkhanbpk@gmail.com",
     icon: "Mail",
-    link: "mailto:muhammadharoonawan@gmail.com",
+    link: "mailto:adilkhanbpk@gmail.com",
   },
   {
     title: "Phone",
-    value: "+92 347 9761433",
+    value: "+92 3178261618",
     icon: "Phone",
-    link: "tel:+923479761433",
+    link: "tel:+923178261618",
   },
   {
     title: "Location",

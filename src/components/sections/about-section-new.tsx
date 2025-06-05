@@ -20,7 +20,8 @@ const skills: Skill[] = [
   { name: "MERN Stack", percentage: 80 },
   { name: "Node.js & Express", percentage: 75 },
   { name: "MongoDB", percentage: 75 },
-  { name: "PHP", percentage: 70 },
+  { name: "SQL", percentage: 85 },
+
 ];
 
 const SkillBar = ({ skill, index }: { skill: Skill; index: number }) => {
@@ -68,7 +69,7 @@ export function AboutSection() {
           <Card className="glass-card">
             <CardContent className="card-content">
               <AnimatedText
-                text="Hey there! I'm Muhammad Adil, also known as 'Hane', and I'm a Computer Science graduate with a passion for web development."
+                text="Hey there! I'm Muhammad Adil, a Computer Science graduate with a passion for web development."
                 className="mb-4 text-foreground/90"
                 type="words"
                 animation="slide-up"
@@ -78,14 +79,12 @@ export function AboutSection() {
 
               <ParallaxSection speed={0.1} direction="vertical">
                 <p className="mb-4 text-foreground/90 text-sm leading-relaxed">
-                  As a <span className="highlight">passionate front-end developer</span>, I specialize in creating <span className="highlight">visually stunning</span> and <span className="highlight">highly interactive</span> web experiences. With <span className="highlight">1.5+ years of hands-on experience</span>, I've developed a keen eye for detail and the technical skills to transform complex requirements into elegant solutions.
-                </p>
+As a <span className="highlight">passionate front-end developer</span>, I specialize in building <span className="highlight">visually appealing</span> and <span className="highlight">interactive web interfaces</span>. With over <span className="highlight">1.5 years of hands-on experience</span>, I’ve developed a strong eye for detail and a solid grasp of modern tools like <span className="highlight">TypeScript</span> and <span className="highlight">Tailwind CSS</span>, enabling me to turn complex ideas into clean, user-friendly solutions.                </p>
               </ParallaxSection>
 
               <ParallaxSection speed={0.15} direction="vertical" reverse={true}>
-                <p className="text-foreground/90 text-sm leading-relaxed">
-                  As a <span className="highlight">MERN stack developer</span>, I specialize in building <span className="highlight">full-stack applications</span> using <span className="text-primary/80 font-medium">MongoDB</span>, <span className="text-primary/80 font-medium">Express</span>, <span className="text-primary/80 font-medium">ReactJS</span>, and <span className="text-primary/80 font-medium">Node.js</span>. My expertise extends to <span className="highlight">advanced frameworks</span> like <span className="text-primary/80 font-medium">NextJS</span> and <span className="text-primary/80 font-medium">Angular</span>, creating solutions that are <span className="highlight">performant</span> and <span className="highlight">scalable</span>.
-                </p>
+                <p className="text-foreground/90 mt-2 text-sm leading-relaxed">
+As a <span className="highlight">MERN stack developer</span>, I specialize in building <span className="highlight">full-stack web applications</span> using <span className="text-primary/80 font-medium">MongoDB</span>, <span className="text-primary/80 font-medium">Express.js</span>, <span className="text-primary/80 font-medium">React.js</span>, and <span className="text-primary/80 font-medium">Node.js</span>. I have strong experience working with <span className="highlight">TypeScript</span> and <span className="highlight">Tailwind CSS</span> to create clean, maintainable UIs. My core strength lies in <span className="highlight">integrating third-party APIs</span> and building scalable, real-world solutions with efficiency and reliability.</p>
               </ParallaxSection>
 
               <ScrollAnimation direction="up" delay={0.5} className="mt-8">

@@ -11,14 +11,14 @@ import { useNavigation } from "@/context/navigation-context";
 const quotes = [
   "Craft seamless digital experiences with clear purpose",
   "Turn ideas into elegant, user‑focused designs",
-  "Build and scale robust backends using MERN, PHP, MySQL, and MongoDB",
+  "Build and scale robust backends using MERN and MySQL,",
   "Integrate API's flawlessly to bring your vision to life",
 ];
 
 const skills = [
-  "MERN & PHP Full‑Stack Development",
+  "MERN, Full‑Stack Development",
   "Responsive & Adaptive UI/UX Design",
-  "Robust Backend Architectures MySQL, MongoDB",
+  "Robust Backend Architectures node.js, MySQL, MongoDB",
   "API Design, Integration & Database Management",
 ];
 
@@ -46,33 +46,47 @@ export function HomeSection() {
       clearInterval(skillInterval);
     };
   }, []);
-
+ 
   return (
     <SectionTransition className="flex flex-col items-center justify-center text-center py-8 relative w-[100%]">
       <motion.div
-        className="w-[100%]"
+        className="w-[100%] flex flex-col items-center justi"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
-        {/* <motion.h2
-          className="text-2xl font-bold mb-6 gradient-text"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-        >
-          Home
-        </motion.h2> */}
+  
+        <div className="flex items-center justify-center gap-6 sm:gap-8 md:gap-10 mb-6">
+          {/* Profile Image */}
+          <div className="flex-shrink-0">
+            <div className="h-30 w-30 sm:h-30 sm:w-30 md:h-38 md:w-38 lg:h-60 lg:w-60 rounded-full bg-primary/20 overflow-hidden shadow-lg ring-2 ring-primary/10">
+              <img
+                src="/images/profile.jpg"
+                alt="Muhammad Adil"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
 
-        <TypingEffect
-          text="Hello, I'm Muhammad Adil"
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold gradient-text mb-6"
-          delay={300}
-          speed={70}
-        />
+          {/* Name Text */}
+          <div className="text-left">
+            <TypingEffect
+              text="Hi, I am"
+              className="text-lg sm:text-xl md:text-3xl lg:text-4xl font-lg text-foreground/80 mb-1"
+              delay={300}
+              speed={70}
+            />
+            <TypingEffect
+              text="Muhammad Adil"
+              className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold gradient-text"
+              delay={800}
+              speed={70}
+            />
+          </div>
+        </div>
 
         <motion.div
-          className="h-8 sm:h-10 md:h-12 mb-4 relative overflow-hidden"
+          className="min-h-16 sm:h-10 md:h-12 mb-4 relative overflow-hidden flex items-center justify-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.8 }}
@@ -83,7 +97,7 @@ export function HomeSection() {
             animate={{ opacity: showQuote ? 1 : 0, y: showQuote ? 0 : -20 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5 }}
-            className="text-base sm:text-lg md:text-2xl font-medium text-foreground/80"
+            className="text-base sm:text-lg md:text-2xl font-medium text-foreground/80 leading-relaxed"
           >
             {quotes[currentQuoteIndex]}
           </motion.div>
@@ -131,7 +145,7 @@ export function HomeSection() {
         </motion.div>
 
         <motion.div
-          className="scroll-down-indicator mt-10 relative left-1/2 transform -translate-x-1/2"
+          className="scroll-down-indicator mt-10 flex justify-center w-full"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 1.5 }}

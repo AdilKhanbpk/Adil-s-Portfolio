@@ -23,36 +23,43 @@ import { ParallaxSection } from "@/components/animations/parallax-section";
 import { useState } from "react";
 
 const education: Education[] = [
+  // {
+  //   degree: "Matric",
+  //   institution: "Khyber Model School",
+  //   period: "2018",
+  //   description:
+  // "I completed my Matriculation at Khyber Model School, securing 81% marks."  },
   {
     degree: "Bachelor of Computer Science",
-    institution: "University Name",
+    institution: "University Of Swabi",
     period: "2020 - 2024",
     description:
-      "Graduated with a degree in Computer Science with a focus on web development and software engineering.",
+     <p>Graduated with a degree in Computer Science with a focus on web development and software engineering , securing <span className="text-primary/80 font-semibold"> CGPA 3.30 .</span></p>
   },
 ];
 
 const experience: Experience[] = [
   {
-    position: "Full Stack Developer",
+    position: "MERN Stack Developer",
     company: "TechCreator",
-    period: "2024 - Present",
+    period: "jan - 2025 - Present",
     description:
       "Working as a Full Stack Developer, building complete web applications using modern technologies and best practices.",
   },
+
   {
-    position: "Full Stack Developer",
-    company: "Upwork & Fiverr",
-    period: "2023 - 2024",
-    description:
-      "Delivered full stack web solutions for various clients, focusing on modern web technologies and responsive design.",
-  },
-  {
-    position: "Full Stack Development Intern",
+    position: "MERN Stack Development Intern",
     company: "TechCreator",
-    period: "2023",
+    period: "sep-2024  -  dec 2024",
     description:
       "Contributed to full stack development projects, working with both frontend and backend technologies while learning industry best practices.",
+  },
+    {
+    position: "MERN Stack Developer",
+    company: "SELF Projects",
+    period: "july-2023 - march-2024",
+    description:
+      "Develped My Final Year Project 'A Local Government Reporting System' and other small projects in Order To Study MERN stack in depth"
   },
 ];
 
@@ -370,7 +377,7 @@ export function ResumeSection() {
           transition={{ type: "spring", stiffness: 400, damping: 10 }}
         >
           <a
-            href="https://drive.google.com/file/d/1ujCOLwbDBBZ0_KH0B6NAECARaekVTqu2/view"
+            href="https://drive.google.com/file/d/10hBmFVV_G6OkftjYJG3DGFxZn8_1f6b7/view"
             target="_blank"
             rel="noopener noreferrer"
             onClick={(e) => {
@@ -379,7 +386,7 @@ export function ResumeSection() {
               // Simulate loading time
               setTimeout(() => {
                 window.open(
-                  "https://drive.google.com/file/d/1ujCOLwbDBBZ0_KH0B6NAECARaekVTqu2/view",
+                  "https://drive.google.com/file/d/10hBmFVV_G6OkftjYJG3DGFxZn8_1f6b7/view",
                   "_blank"
                 );
                 setIsLoading(false);

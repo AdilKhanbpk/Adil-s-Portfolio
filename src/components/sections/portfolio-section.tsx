@@ -52,9 +52,9 @@ const portfolioItems: PortfolioItem[] = [
 		image:
 			"https://images.unsplash.com/photo-1606761568499-6d2451b23c66?q=80&w=2074&auto=format&fit=crop",
 		link: "#",
-		technologies: ["React", "Tailwind CSS", "Bootstrap", "PHP", "MySQL"],
+		technologies: ["React", "Tailwind CSS" , "SQL" , "NoSQL" , "Node.js"],
 		description:
-			"A comprehensive College Management System featuring student enrollment, course management, attendance tracking, and grade management. Built with React frontend and PHP/MySQL backend for robust data handling.",
+			"A comprehensive College Management System featuring student enrollment, course management, attendance tracking, and grade management. Built with React frontend and Node.js/SQL and NoSQL backend for robust data handling.",
 	},
 	{
 		id: "5",
