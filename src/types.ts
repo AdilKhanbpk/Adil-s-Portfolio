@@ -15,7 +15,7 @@ export interface Education {
   degree: string;
   institution: string;
   period: string;
-  description: string;
+  description: React.ReactNode;
 }
 
 export interface Experience {
