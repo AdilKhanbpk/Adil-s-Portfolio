@@ -10,11 +10,12 @@ export interface PortfolioItem {
   technologies: string[];
   description: string;
 }
+
 export interface Education {
   degree: string;
   institution: string;
   period: string;
-description: React.ReactNode;
+  description: React.ReactNode;
 }
 
 export interface Experience {

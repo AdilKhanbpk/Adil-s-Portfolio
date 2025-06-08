@@ -125,7 +125,7 @@ function SidebarContent({
   navItems: { title: string; href: string; icon: React.ReactNode }[];
   theme: string;
 }) {
-  const { theme: currentTheme, toggleTheme } = useTheme();
+  const { toggleTheme } = useTheme(); // Remove currentTheme from destructuring
   return (
     <div className="flex h-full flex-col glass-card overflow-y-auto max-h-screen sidebar-content">
       {/* Profile section */}

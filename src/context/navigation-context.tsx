@@ -95,7 +95,7 @@ export function NavigationProvider({ children }: { children: React.ReactNode }) 
 
   useEffect(() => {
     // Define proper types for the debounce function
-    const debounce = <T extends (...args: any[]) => void>(
+    const debounce = <T extends (...args: unknown[]) => void>(
       callback: T,
       wait: number
     ) => {
