@@ -33,12 +33,9 @@ const education: Education[] = [
     degree: "Bachelor of Computer Science",
     institution: "University Of Swabi",
     period: "2020 - 2024",
-    description: (
-      <>
-        Graduated with a degree in Computer Science with a focus on web development and software engineering,
-        securing <span className="text-primary/80 font-semibold">CGPA 3.30.</span>
-      </>
-    ),  },
+    description: 'Graduated with a degree in Computer Science with a focus on web development and software engineering, securing CGPA 3.30.'
+
+},
 ];
 
 const experience: Experience[] = [
