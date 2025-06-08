@@ -94,10 +94,13 @@ export function NavigationProvider({ children }: { children: React.ReactNode }) 
   }, [touchStartX]);
 
   useEffect(() => {
-    // Debounce function to prevent rapid firing
-    const debounce = (callback: Function, wait: number) => {
+    // Define proper types for the debounce function
+    const debounce = <T extends (...args: any[]) => void>(
+      callback: T,
+      wait: number
+    ) => {
       let timeoutId: NodeJS.Timeout | null = null;
-      return (...args: any[]) => {
+      return (...args: Parameters<T>) => {
         if (timeoutId) clearTimeout(timeoutId);
         timeoutId = setTimeout(() => callback(...args), wait);
       };

@@ -109,22 +109,17 @@ export function RevealSection({
     target: ref,
     offset: ["start end", "end start"]
   });
-  
-  // Calculate transform based on direction
-  let x = 0;
-  let y = 0;
-  
-  if (direction === "up") {
-    y = useTransform(scrollYProgress, [0, threshold, 1], [100, 0, 0]);
-  } else if (direction === "down") {
-    y = useTransform(scrollYProgress, [0, threshold, 1], [-100, 0, 0]);
-  } else if (direction === "left") {
-    x = useTransform(scrollYProgress, [0, threshold, 1], [100, 0, 0]);
-  } else if (direction === "right") {
-    x = useTransform(scrollYProgress, [0, threshold, 1], [-100, 0, 0]);
-  }
-  
+
+  // Define transforms for all directions unconditionally
+  const yUp = useTransform(scrollYProgress, [0, threshold, 1], [100, 0, 0]);
+  const yDown = useTransform(scrollYProgress, [0, threshold, 1], [-100, 0, 0]);
+  const xLeft = useTransform(scrollYProgress, [0, threshold, 1], [100, 0, 0]);
+  const xRight = useTransform(scrollYProgress, [0, threshold, 1], [-100, 0, 0]);
   const opacity = useTransform(scrollYProgress, [0, threshold, 1], [0, 1, 1]);
+
+  // Select the appropriate transforms based on direction
+  const x = direction === "left" ? xLeft : direction === "right" ? xRight : 0;
+  const y = direction === "up" ? yUp : direction === "down" ? yDown : 0;
   
   return (
     <div 

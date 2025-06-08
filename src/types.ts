@@ -29,3 +29,10 @@ export interface Service {
   description: string;
   icon: "Code" | "Smartphone" | "Palette" | "Server";
 }
+
+export interface ContactInfo {
+  title: string;
+  value: string;
+  icon: "Mail" | "Phone" | "MapPin";
+  link?: string;
+}

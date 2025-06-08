@@ -1,15 +1,16 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react"; // Remove useEffect
 import { SectionTransition } from "@/components/animations/section-transition";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { PortfolioItem } from "@/types";
-import { motion, AnimatePresence, useAnimation } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion"; // Remove useAnimation
 import { ExternalLink, Code } from "lucide-react";
 import { ScrollAnimation } from "@/components/animations/scroll-animation";
 import { AnimatedText } from "@/components/animations/animated-text";
 import { ParallaxSection } from "@/components/animations/parallax-section";
+import Image from "next/image";
 
 const portfolioItems: PortfolioItem[] = [
 	{
@@ -113,24 +114,14 @@ const categories = ["all", "web", "app", "design"];
 export function PortfolioSection() {
 	const [activeCategory, setActiveCategory] = useState("all");
 	const [selectedItem, setSelectedItem] = useState<PortfolioItem | null>(null);
-	const controls = useAnimation();
 	const modalRef = useRef<HTMLDivElement>(null);
 
-
-	
 	const filteredItems =
 		activeCategory === "all"
 			? portfolioItems
 			: portfolioItems.filter((item) => item.category === activeCategory);
 
-	const handleCardClick = (item: PortfolioItem, event: React.MouseEvent) => {
-		const card = event.currentTarget;
-		const rect = card.getBoundingClientRect();
-
-		// Calculate center position relative to viewport
-		const centerX = window.innerWidth / 2;
-		const centerY = window.innerHeight / 2;
-
+	const handleCardClick = (item: PortfolioItem) => {
 		setSelectedItem(item);
 	};
 
@@ -198,9 +189,11 @@ export function PortfolioSection() {
 										whileHover={{ scale: 1.02 }}
 										transition={{ duration: 0.3 }}
 									>
-										<img
+										<Image
 											src={item.image}
 											alt={item.title}
+											width={600}
+											height={400}
 											className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
 										/>
 										<div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -209,7 +202,7 @@ export function PortfolioSection() {
 													size="icon"
 													variant="outline"
 													className="h-9 w-9 rounded-full border-white/20 bg-black/50 text-white hover:bg-primary"
-													onClick={(e) => handleCardClick(item, e)}
+													onClick={() => handleCardClick(item)}
 												>
 													<ExternalLink className="h-4 w-4" />
 												</Button>
@@ -311,9 +304,11 @@ export function PortfolioSection() {
 								animate={{ opacity: 1, y: 0 }}
 								transition={{ delay: 0.2 }}
 							>
-								<img
+								<Image
 									src={selectedItem.image}
 									alt={selectedItem.title}
+									width={800}
+									height={600}
 									className="w-full h-full object-cover"
 								/>
 							</motion.div>

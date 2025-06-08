@@ -3,6 +3,7 @@
 import { useNavigation } from "@/context/navigation-context";
 import { useTheme } from "@/context/theme-context";
 import { Home, User, FileText, Briefcase, Mail, GithubIcon, LinkedinIcon, TwitterIcon, InstagramIcon, ChevronLeft, ChevronRight, Moon, Sun } from "lucide-react";
+import Image from "next/image";
 
 export function Sidebar() {
   const { isSidebarOpen, toggleSidebar, closeSidebar, activeSection, scrollToSection } = useNavigation();
@@ -116,30 +117,42 @@ export function Sidebar() {
 function SidebarContent({
   activeSection,
   handleNavClick,
-  theme,
-  navItems
+  navItems,
+  theme
 }: {
   activeSection: string;
   handleNavClick: (section: string) => void;
-  theme: "dark" | "light";
   navItems: { title: string; href: string; icon: React.ReactNode }[];
+  theme: string;
 }) {
-  const { toggleTheme } = useTheme();
+  const { theme: currentTheme, toggleTheme } = useTheme();
   return (
     <div className="flex h-full flex-col glass-card overflow-y-auto max-h-screen sidebar-content">
       {/* Profile section */}
       <div className="flex flex-col items-center p-6 border-b border-border/40">
-        <div className="h-24 w-24 rounded-full bg-primary/20 mb-4 overflow-hidden shadow-lg">
-          <img
+        <div className="relative h-24 w-24 rounded-full bg-primary/20 mb-4 overflow-hidden shadow-lg">
+          <Image
             src="/images/profile.jpg"
             alt="Muhammad Adil"
-            className="w-full h-full object-cover"
+            fill
+            className="object-cover"
+            priority
           />
         </div>
         <h1 className="text-xl font-bold gradient-text">
           Muhammad Adil
         </h1>
         <p className="text-muted-foreground mt-1">Web Developer</p>
+        
+        {/* Add theme toggle button */}
+        <button
+          onClick={toggleTheme}
+          className="p-2 rounded-full hover:bg-primary/10 hover:text-primary transition-all duration-300 hover:scale-110 mt-4"
+          aria-label="Toggle theme"
+        >
+          {theme === 'dark' ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+        </button>
+
         <div className="flex gap-3 mt-4">
           <a href="#" className="p-2 rounded-full hover:bg-primary/10 hover:text-primary transition-all duration-300 hover:scale-110">
             <GithubIcon className="h-4 w-4" />
