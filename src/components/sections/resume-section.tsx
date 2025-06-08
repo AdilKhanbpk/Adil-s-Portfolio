@@ -33,9 +33,12 @@ const education: Education[] = [
     degree: "Bachelor of Computer Science",
     institution: "University Of Swabi",
     period: "2020 - 2024",
-    description:
-     <p>Graduated with a degree in Computer Science with a focus on web development and software engineering , securing <span className="text-primary/80 font-semibold"> CGPA 3.30 .</span></p>
-  },
+    description: (
+      <>
+        Graduated with a degree in Computer Science with a focus on web development and software engineering,
+        securing <span className="text-primary/80 font-semibold">CGPA 3.30.</span>
+      </>
+    ),  },
 ];
 
 const experience: Experience[] = [
@@ -114,7 +117,7 @@ const ResumeItem = ({
   title: string;
   subtitle: string;
   period: string;
-  description: string;
+  description: React.ReactNode; // <-- updated here
   icon: React.ReactNode;
   index?: number;
 }) => {

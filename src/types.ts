@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export interface PortfolioItem {
   id: string;
   title: string;
@@ -7,4 +9,23 @@ export interface PortfolioItem {
   github?: string;
   technologies: string[];
   description: string;
+}
+export interface Education {
+  degree: string;
+  institution: string;
+  period: string;
+description: React.ReactNode;
+}
+
+export interface Experience {
+  position: string;
+  company: string;
+  period: string;
+  description: string;
+}
+
+export interface Service {
+  title: string;
+  description: string;
+  icon: "Code" | "Smartphone" | "Palette" | "Server";
 }

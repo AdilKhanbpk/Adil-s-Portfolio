@@ -59,7 +59,7 @@ export function HomeSection() {
         <div className="flex items-center justify-center gap-6 sm:gap-8 md:gap-10 mb-6">
           {/* Profile Image */}
           <div className="flex-shrink-0">
-            <div className="h-30 w-30 sm:h-30 sm:w-30 md:h-38 md:w-38 lg:h-60 lg:w-60 rounded-full bg-primary/20 overflow-hidden shadow-lg ring-2 ring-primary/10">
+            <div className="h-30 w-30 sm:h-30 sm:w-30 md:h-38 md:w-38 lg:h-50 lg:w-50 rounded-full bg-primary/20 overflow-hidden shadow-lg ring-2 ring-primary/10">
               <img
                 src="/images/profile.jpg"
                 alt="Muhammad Adil"

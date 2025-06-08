@@ -116,6 +116,8 @@ export function PortfolioSection() {
 	const controls = useAnimation();
 	const modalRef = useRef<HTMLDivElement>(null);
 
+
+	
 	const filteredItems =
 		activeCategory === "all"
 			? portfolioItems
@@ -279,7 +281,7 @@ export function PortfolioSection() {
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
 						exit={{ opacity: 0 }}
-						className="fixed inset-0 z-[100] flex items-center justify-center overflow-y-auto bg-black/70 backdrop-blur-sm"
+						className="absolute inset-0 z-[1000] flex items-center justify-center overflow-y-auto bg-black/70 backdrop-blur-sm"
 						onClick={() => setSelectedItem(null)}
 					>
 						<motion.div
