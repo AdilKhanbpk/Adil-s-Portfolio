@@ -65,7 +65,7 @@ export function AboutSection() {
           <Card className="glass-card">
             <CardContent className="card-content">
               <AnimatedText
-                text="Hey there! I'm Muhammad Adil, also known as 'Hane', and I'm a Computer Science graduate with a passion for web development."
+                text="Hey there! I'm Muhammad Adil, a Computer Science graduate with a passion for web development."
                 className="mb-4 text-foreground/90"
                 type="words"
                 animation="slide-up"
