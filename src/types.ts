@@ -1,4 +1,3 @@
-
 export interface PortfolioItem {
   id: string;
   title: string;
@@ -35,4 +34,9 @@ export interface ContactInfo {
   value: string;
   icon: "Mail" | "Phone" | "MapPin";
   link?: string;
+}
+
+export interface Skill {
+  name: string;
+  percentage: number;
 }
